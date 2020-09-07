@@ -11,13 +11,16 @@ app.use(express.static(__dirname+'/src/public'));
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/src/index.html'));
-  //__dirname : It will resolve to your project folder.
+
 });
 
 
 app.get('/simulado1',function(req,res){
-  res.sendFile(path.join(__dirname+'/src/simulado1.html'));
-  //__dirname : It will resolve to your project folder.
+  res.sendFile(path.join(__dirname+'/src/views/simulado1.html'));
+});
+
+app.get('/simulado2',function(req,res){
+  res.sendFile(path.join(__dirname+'/src/views/simulado2.html'));
 });
 
 /*
