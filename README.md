@@ -1,4 +1,6 @@
-# AZURE-QUESTIONS-APP
+# AZ-QUESTIONS-APP
+
+> Deploy in https://az-questions-app.herokuapp.com/
 
 ## Versão 1.0
 
@@ -24,6 +26,33 @@ Index.js is a server file, thats run in http://localhost:5000
 #### Teste API
 
 API runs in http://localhost:5000/api/passwords
+
+
+## Deploy Heroku
+> Referência: https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/
+
+> Hospedar o app no github.
+https://github.com/Jonathan-geo/az-questions-app
+
+> Criar app no Heroku: Create new app.
+
+> Ir na opção: Connect to GitHub.
+
+> Encontrar e conectar com o GitHub repository.
+
+> Enable Automatic Deploys.
+
+> Ir em  Settings, Buildpacks e clicar em  “Add buildpack”.
+
+> Selecionar nodejs.
+
+> Ir na aba Deploy e ir em Deploy Branch.
+
+> Na aba Activity ver o log de sucesso.
+
+
+
+
 
 
 

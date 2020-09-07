@@ -15,8 +15,8 @@ app.get('/',function(req,res){
 });
 
 
-app.get('/result',function(req,res){
-  res.sendFile(path.join(__dirname+'/src/result.html'));
+app.get('/simulado1',function(req,res){
+  res.sendFile(path.join(__dirname+'/src/simulado1.html'));
   //__dirname : It will resolve to your project folder.
 });
 
