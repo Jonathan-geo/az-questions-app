@@ -28,7 +28,10 @@ app.get('/simulado2',function(req,res){
   res.sendFile(path.join(__dirname+'/src/views/simulado2.html'));
 });
 
-
+//****SIMULADO-2****/
+app.get('/simulado3',function(req,res){
+  res.sendFile(path.join(__dirname+'/src/views/simulado3.html'));
+});
 
 
 
