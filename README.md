@@ -53,10 +53,29 @@ https://github.com/Jonathan-geo/az-questions-app
 
 
 
-
-
-
 ## Versão 2.0
+
+### Simulando Banco de Dados NoSQL
+
+> npm i --save body-parser
+> npm i --save fs-extra
+> npm i --save jsonfile (https://www.npmjs.com/package/jsonfile)
+
+### Referencias
+
+> https://medium.com/@febatista107/como-converter-os-dados-de-uma-requisi%C3%A7%C3%A3o-com-o-body-parser-2b5b93100f00
+
+> https://flaviocopes.com/node-writing-files/
+
+
+
+
+
+
+
+
+
+## Versão 3.0
 
 #### React App
 

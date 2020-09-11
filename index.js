@@ -1,38 +1,33 @@
 const express = require('express');
 const path = require('path');
-//const generatePassword = require('password-generator');
+
+
 
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
 
-// Serve static files from the React app
-//app.use(express.static(path.join(__dirname, 'client/build')));
+
+
+
 app.use(express.static(__dirname+'/src/public'));
 
-
+//****INDEX-HOME****/
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/src/index.html'));
 
 });
 
-
+//****SIMULADO-1****/
 app.get('/simulado1',function(req,res){
   res.sendFile(path.join(__dirname+'/src/views/simulado1.html'));
 });
 
+//****SIMULADO-2****/
 app.get('/simulado2',function(req,res){
   res.sendFile(path.join(__dirname+'/src/views/simulado2.html'));
 });
 
-/*
-router.get('/about',function(req,res){
-  res.sendFile(path.join(__dirname+'/about.html'));
-});
-
-router.get('/sitemap',function(req,res){
-  res.sendFile(path.join(__dirname+'/sitemap.html'));
-});
-
-*/
 
 
 
@@ -45,41 +40,90 @@ router.get('/sitemap',function(req,res){
 
 
 
-/*
+//****CAMINHO-JSON****/
+const caminho = path.join(__dirname+'/src/public/data/dataBase.json');
 
-// Put all API endpoints under '/api'
-app.get('/api/passwords', (req, res) => {
-  const count = 5;
-
-  // Generate some passwords
-  const passwords = Array.from(Array(count).keys()).map(i =>
-    generatePassword(12, false)
-  )
-
-  // Return them as json
-  res.json(passwords);
-
-  console.log(`Sent ${count} passwords`);
-});
-
-*/
+//****REQUIRE-JSON****/
+var foo = require(caminho);
 
 
+//****RENDER-API-JSON-REQUIRED****/
+app.get('/api', (req, res) => {
+    res.send(foo)
+})
+
+
+//VER POR QUE O MEU DADO ESTA SENDO 
+//GRAVADO COMO UNDIFINED
+
+
+/****REQUIRE-JSONFILE***/
+const jsonfile = require('jsonfile')
+
+/****POST-WRITE***/
+app.post('/api/post', (req, res) => {
+  let data = req.body;
+  console.log(req.body);
+  jsonfile.writeFile(caminho, data, { flag: 'a' })
+    .then(res => {
+      console.log('Write complete')
+    })
+    .catch(error => console.error(error))
+
+  res.json({ status: 'User created successfully!' });
+})
+
+/****POST-PUSH***/ //FALTOU UM POST DO TIPO INCREMENTA 
+//POIS O POST ANTERIOS SOBRESCREVE
 
 
 
 
-/*
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
 
 
 
 
-*/
+
+
+
+
+
+
+
+
+
+//****JSON-EXEMPLO****/
+const users = [
+  {name: 'Jones', email: 'jones@gmail.com'},
+  {name: 'Henrique', email: 'henrique@hotmail.com'},
+]
+
+//****RENDER-API-JSON-REQUIRED****/
+app.get('/users', (req, res) => {
+  res.json(users)
+  //res.send(users)  também funciona
+})
+
+
+app.post('/users/post', (req, res) => {
+  users.push(req.body);
+  console.log(req.body);
+  res.json({ status: 'User created successfully!' });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const port = process.env.PORT || 5000;
 app.listen(port);
 
