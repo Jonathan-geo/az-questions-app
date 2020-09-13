@@ -2,6 +2,11 @@
 
 > Deploy in https://az-questions-app.herokuapp.com/
 
+Este é um app com questões de simulados das prova AZ 900 da azure. As questões foram coletadas no seguintes sites:
+https://www.itexams.com/exam/AZ-900
+https://www.examtopics.com/exams/microsoft/az-900/view/
+https://www.dumpsolutions.com/AZ-900-dumps/
+
 ## Versão 1.0
 
 ### Roteiro de Implementação
@@ -68,6 +73,27 @@ https://github.com/Jonathan-geo/az-questions-app
 > https://flaviocopes.com/node-writing-files/
 
 
+## Versão 3.0
+
+### Usando o SQLite 
+
+> Criar um arquivo.db na solução 
+
+> npm i --save sqlite3
+
+> utilizar o SQLite online para criar as tables: https://sqliteonline.com/
+
+> melhor referência: https://github.com/Carleon/node-js-sqlite
+
+```sql
+CREATE TABLE thistorico (
+	id INTEGER PRIMARY KEY,
+	nome TEXT NOT NULL,
+	tdata TEXT NOT NULL,
+  acerto INT NOT NULL,
+  erro INT NOT NULL
+);
+```
 
 
 

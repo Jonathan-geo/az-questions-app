@@ -20,38 +20,31 @@
                       <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="dropdown-menu bg-secondary" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="/simulado1">Simulado 01</a>
-                    <a class="dropdown-item" href="/simulado2">Simulado 02</a>
-                    <a class="dropdown-item" href="/simulado3">Simulado 03</a>
-                    <a class="dropdown-item" href="/historico">Histórico</a>
+                    <a class="dropdown-item" href="/">Voltar</a>
                   </div>
               </div>
 
           </nav>
+
+
+          <h2>BUSCAR TUDO</h2>
+          <button onclick="get()">BUSCAR</button>
+          <div id=mensagem>
+
+          </div>
+
+          <h2>BUSCA POR NOME</h2>
+
+          <label for="nome">Nome:</label><br>
+          <input type="text" id="nome" name="nome"><br>
+          <button onclick="getName()">BUSCAR</button>
+          <div id=mensagem2>
+
+          </div>
           <br>
           <br>
 
-          <h2>SALVAR HISTÓRICO</h2>
-          <br>
-          <h5>app ainda em construção!</h5>
-
-          <br>
-          <form onsubmit="return validadeHistorico(this)" method="POST" action="/historico">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome"><br>
-
-            <label for="data">Data:</label><br>
-            <input type="date" id="data" name="data"><br><br>
-
-            <label for="acerto">Acertos:</label><br>
-            <input id="acerto" name="acerto" type="number" min="0" max="10" step="1" value="0"/><br><br>
-            
-
-            <label for="erro">Erros:</label><br>
-            <input id="erro" name="erro" type="number" min="0" max="10" step="1" value="0"/><br><br>
-
-            <input type="submit" id="submit" value="Submit">
-          </form> 
+          <button onclick="limpar()">LIMPAR</button>
 
       </div>
     </div>
@@ -65,8 +58,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     
 
-    <script src="js/forms.js" ></script>
-  
+
+
+    <script src="js/list.js" ></script>
+
   
   </body>
 </html>
