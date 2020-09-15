@@ -98,20 +98,6 @@ CREATE TABLE thistorico (
 
 
 
-## Versão 4.0
-
-### Mongo DB
-
-npm i --save mongoose
-
-
-
-
-
-
-
-
-
 
 
 
