@@ -1,4 +1,4 @@
-const mongooose = require('../database');
+const mongooose = require('../database/dbconfig');
 
 const PontuacaoSchema = new mongooose.Schema({
     nome: {
