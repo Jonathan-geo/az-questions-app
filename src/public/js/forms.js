@@ -10,7 +10,7 @@ const validadeField = (field, message) => {
 
 
 
-const validadeHistorico = (form) => {
+const validateHistorico = (form) => {
     return validadeField(form.nome, "Preencha o nome") && 
         validadeField(form.data, "Preencha a data") &&
         validadeField(form.acerto, "Preencha o acerto") &&
