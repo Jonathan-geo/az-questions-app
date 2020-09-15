@@ -19,7 +19,7 @@ require('./src/routers/RotasPrincipais')(app, diret);
 require('./src/routers/Simulados')(app, diret);
 require('./src/routers/ApiExemplo')(app);
 require('./src/routers/RotasErros')(app);
-require('./src/controllers/pontuacaoController')(app);
+
 
 
 const port = process.env.PORT || 5000;
