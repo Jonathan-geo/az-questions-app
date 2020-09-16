@@ -11,13 +11,12 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname+'/src/public'));
 
 const path = require('path');
-const diret = path.join(__dirname);
+const diretorio = path.join(__dirname);
 
 
 require('./src/controllers/pontuacaoController')(app);
-require('./src/routers/mainrouters')(app, diret);
-require('./src/routers/simulados')(app, diret);
-require('./src/routers/RotasErros')(app);
+require('./src/controllers/indexController')(app, diretorio)
+require('./src/controllers/erroController')(app);
 
 
 const port = process.env.PORT || 5000;

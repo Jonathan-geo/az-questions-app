@@ -2,11 +2,6 @@ module.exports = function (app) {
 
     const Pontuacao = require('../models/Pontuacao');
 
-
-    app.get('/teste', async (req, res) => {
-        return res.send({"Casa":"Minha"});
-    })
-
     app.post('/pontuacao', async (req, res) => {
         try{
             await Pontuacao.create(req.body);
