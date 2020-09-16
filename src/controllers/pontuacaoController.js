@@ -4,6 +4,7 @@ module.exports = function (app) {
 
     app.post('/pontuacao', async (req, res) => {
         try{
+            //console.log(req.body);
             await Pontuacao.create(req.body);
             return res.redirect("/");
         }catch (err){

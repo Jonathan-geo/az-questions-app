@@ -34,14 +34,17 @@
           <h2>SALVAR HISTÓRICO</h2>
           <br>
           <h5>app ainda em construção!</h5>
-          <p>Versão 1.9</p>
+          <p>Versão 2.0</p>
           <br>
-          <form onsubmit="return validadeHistorico(this)" method="POST" action="#">
+          <form onsubmit="return validadeHistorico(this)" method="POST" action="/pontuacao">
             <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome"><br>
 
             <label for="data">Data:</label><br>
             <input type="date" id="data" name="data"><br><br>
+
+            <label for="simulado">Simulado:</label><br>
+            <input id="simulado" name="simulado" type="number" step="1" value="1"/><br><br>
 
             <label for="acerto">Acertos:</label><br>
             <input id="acerto" name="acerto" type="number" min="0" max="10" step="1" value="0"/><br><br>
