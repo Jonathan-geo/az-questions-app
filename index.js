@@ -14,7 +14,7 @@ const path = require('path');
 const diret = path.join(__dirname);
 
 
-
+require('./src/controllers/pontuacaoController')(app);
 require('./src/routers/mainrouters')(app, diret);
 require('./src/routers/simulados')(app, diret);
 require('./src/routers/RotasErros')(app);

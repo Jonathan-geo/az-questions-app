@@ -6,4 +6,5 @@ module.exports = function (app, path) {
         res.sendFile(path+'/src/index.html');
     });
     
+
 };
