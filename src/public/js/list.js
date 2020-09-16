@@ -18,7 +18,7 @@ function showResponse2(res){
 
 
 function get(){
-    axios.get("/api")
+    axios.get("#")
         .then(res =>showResponse(res))
 }
 
@@ -26,7 +26,7 @@ function get(){
 function getName(){
     var nome = document.querySelector('#nome').value;
 
-    axios.get("/historico/"+nome)
+    axios.get("#"+nome)
         .then(res =>showResponse2(res))
         
 }
