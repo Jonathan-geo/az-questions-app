@@ -24,4 +24,10 @@ module.exports = function (app, diretorio) {
         res.sendFile(diretorio+'/src/views/simulado3.html');
     });
 
+    //****SIMULADO-4****/
+    app.get('/simulado4', async (req,res) => {
+        res.sendFile(diretorio+'/src/views/simulado4.html');
+    });
+
+    
 }
