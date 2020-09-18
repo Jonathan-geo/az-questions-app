@@ -23,4 +23,20 @@ module.exports = function (app) {
         } 
         
     })
+
+    app.get('/pontuacao/api/:nome', async (req, res) => {
+        try{
+            
+            let dados = await Pontuacao.find({ nome: req.params.nome });
+            return res.send(dados);
+        }catch (err){
+            return res.redirect("/");
+            //return res.status(400).send({error: 'Falha no registro de dados'});
+        } 
+        
+    })
+
+
+
+
 }

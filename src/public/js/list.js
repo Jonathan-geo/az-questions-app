@@ -1,24 +1,46 @@
 function showResponse(res){
-    document.querySelector('#mensagem').innerHTML = `
-        <pre id="remove">
-            ${JSON.stringify(res.data,null,'\t')}
-        </pre>
-    `
+    let dados = res.data;
+    dados.forEach(function(arg) {
+        document.querySelector('#mensagem').innerHTML += `
+        <div id="remove1">
+
+            <pre>NOME: ${arg.nome}</pre>
+            <pre>DATA: ${new Date(arg.data).toLocaleDateString()}</pre>
+            <pre>SIMULADO: ${arg.simulado}</pre>
+            <pre>ACERTOS: ${arg.acerto}</pre>
+            <pre>ERROS: ${arg.erro}</pre>
+            <hr>
+        
+        </div>
+    
+        `;
+    });
 }
 
 function showResponse2(res){
-    document.querySelector('#mensagem2').innerHTML = `
-        <pre id="remove">
-            ${JSON.stringify(res.data,null,'\t')}
-        </pre>
-    `
+    let dados = res.data;
+    dados.forEach(function(arg) {
+        document.querySelector('#mensagem2').innerHTML += `
+        <div id="remove1">
+
+            <pre>NOME: ${arg.nome}</pre>
+            <pre>DATA: ${new Date(arg.data).toLocaleDateString()}</pre>
+            <pre>SIMULADO: ${arg.simulado}</pre>
+            <pre>ACERTOS: ${arg.acerto}</pre>
+            <pre>ERROS: ${arg.erro}</pre>
+            <hr>
+        
+        </div>
+    
+        `;
+    });
 }
 
 
 
 
 function get(){
-    axios.get("#")
+    axios.get("/pontuacao/api")
         .then(res =>showResponse(res))
 }
 
@@ -26,7 +48,7 @@ function get(){
 function getName(){
     var nome = document.querySelector('#nome').value;
 
-    axios.get("#"+nome)
+    axios.get("/pontuacao/api/"+nome)
         .then(res =>showResponse2(res))
         
 }
@@ -34,6 +56,6 @@ function getName(){
 
 
 function limpar(){
-    document.getElementById("mensagem").outerHTML = "";
-    document.getElementById("mensagem2").outerHTML = "";
+    document.getElementById("remove1").outerHTML = "";
+    document.getElementById("remove2").outerHTML = "";
 }
