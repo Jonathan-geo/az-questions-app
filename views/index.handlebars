@@ -1,0 +1,44 @@
+
+<div class="pos-f-t">
+    <h2>Bem vindo: {{nomeLogado}}</h2>
+    <p>Use o menu acima para acessar os simulados e o formulário abaixo para resgistar sua pontuação!</p>
+    <p>Boa Sorte!</p>
+    <br>
+    <h5>app ainda em construção!</h5>
+    <p>Versão 3.0</p>
+    <br>
+    <hr>
+
+
+    <form onsubmit="return validadeHistorico(this)" method="POST" action="/pontuacao">
+
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" value="{{nomeLogado}}"><br>
+
+        <label for="data">Data:</label><br>
+        <input type="date" id="data" name="data" required><br><br>
+
+        <label for="simulado">Simulado:</label><br>
+        <input id="simulado" name="simulado" type="number" step="1" value="1"required /><br><br>
+
+        <label for="acerto">Acertos:</label><br>
+        <input id="acerto" name="acerto" type="number" min="0" max="10" step="1" value="0" required /><br><br>
+
+
+        <label for="erro">Erros:</label><br>
+        <input id="erro" name="erro" type="number" min="0" max="10" step="1" value="0" required /><br><br>
+
+        <input type="submit" id="submit" value="Submit">
+        <br>
+        <hr>
+        <br>
+    </form> 
+
+</div>
+<div>
+    <h6>Rota API</h6>
+    <p>
+    https://az-questions-app.herokuapp.com/pontuacao/api
+    </p>
+</div>
+
