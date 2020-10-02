@@ -19,4 +19,9 @@ router.get('/az04', eAuth, (req, res)=>{
     res.render("simulados/simulado4")
 })
 
+router.get('/az05', eAuth, (req, res)=>{
+    res.render("simulados/simulado5")
+})
+
+
 module.exports = router;
