@@ -123,10 +123,10 @@ router.get('/login', (req, res)=>{
 router.post('/login', (req, res, next)=>{
     passport.authenticate("local", {
         successRedirect: "/",
-        failureRedirect: "/login" ,
+        failureRedirect: "login" ,
         failureFlash: true
     })(req, res, next)
-    req.flash("success_msg", "Login executado com sucesso!");
+    //req.flash("success_msg", "Login executado com sucesso!");
 })
 
 
