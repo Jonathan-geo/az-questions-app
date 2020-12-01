@@ -84,5 +84,5 @@ app.use('/', home)
 const port = process.env.PORT || 5000;
 app.listen(port);
 
-console.log(`Password generator listening on ${port}`);
+console.log(`Az-project listening on ${port}`);
 
