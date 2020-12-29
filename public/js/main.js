@@ -1,10 +1,10 @@
 /**
  * Botão Submit
  */
-document.getElementById("btnSubmit").onclick = function() {
+document.getElementById("btnSubmit").onclick = function(e) {
+    e.preventDefault()
 
-
-    const questions = document.getElementById("forms");
+    let questions = document.getElementById("forms");
     document.getElementById("resultado").innerHTML = '&nbsp;';
     
     var resultados = [];
@@ -38,23 +38,59 @@ document.getElementById("btnSubmit").onclick = function() {
 
     }
 
+    let el = document.querySelectorAll(".correto");
+    for (var i = 0, j = el.length; i < j; i++) {
+        el[i].style['background-color'] = '#83f2a1';
+    }
+
+
     grafico1(correto, errado);
     
 
+    
 
+    //LIMPANDO VARIAVEIS
 
-    //LIMPANDO RARIAVEIS
-    for (var j = 0; j < questions.length; j++) {
-        if (questions[j].checked) {
-            questions[j].checked = false;
-        }
-    }
     var resultados = [];
 
     
     return false;
 
 };
+
+
+
+document.getElementById("limparCampos").onclick = function() {
+
+    let questions = document.getElementById("forms");
+
+    for (var j = 0; j < questions.length; j++) {
+        if (questions[j].checked) {
+            questions[j].checked = false;
+        }
+    }
+
+    let el = document.querySelectorAll(".correto");
+    for (var i = 0, j = el.length; i < j; i++) {
+        el[i].style['background-color'] = '#FFFFFF';
+    }
+
+
+    return false;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
