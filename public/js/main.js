@@ -25,10 +25,10 @@ document.getElementById("btnSubmit").onclick = function(e) {
     var errado = 0;
 
     for (var i = 0; i < resultados.length; i++) {
-        
+        /*
         var node = '<p>' + resultados[i].Question + ' = ' + resultados[i].Resp + '</p>';
         document.getElementById("resultado").innerHTML += node;
-
+        */
          
         if(resultados[i].Resp == 'Correto') {
             correto++

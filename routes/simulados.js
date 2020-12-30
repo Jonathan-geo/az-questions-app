@@ -24,4 +24,9 @@ router.get('/az05', eAuth, (req, res)=>{
 })
 
 
+router.get('/2020az01', eAuth, (req, res)=>{
+    res.render("simulados/simulado2020az01")
+})
+
+
 module.exports = router;
