@@ -1,5 +1,5 @@
-const PROD = "mongodb+srv://jonathan:1246583dv7@cluster0.5ueib.mongodb.net/az-questions-app?retryWrites=true&w=majority"
-const DEV = "mongodb+srv://jonathan:1246583dv7@cluster0.5ueib.mongodb.net/az-questions-app?retryWrites=true&w=majority"
+const PROD = "string de conexão prod"
+const DEV = "string de conexão dev"
 
 if(process.env.NODE_ENV == "production"){
     /*
